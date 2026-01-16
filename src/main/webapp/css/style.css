@@ -89,7 +89,7 @@ button:hover {
 table {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 15px;
 }
 
 table th, table td {
@@ -127,5 +127,7 @@ table tr:nth-child(even) {
     background: #117a8b;
 }
 
-
+.searchBtn{
+	margin-bottom: 15px;
+}
 
