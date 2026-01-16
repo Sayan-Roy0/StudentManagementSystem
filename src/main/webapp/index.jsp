@@ -38,9 +38,17 @@
 Connection con = DBConnection.getConnection();
 if(con != null){
     Statement st = con.createStatement();
-    ResultSet rs = st.executeQuery(
-        "SELECT * FROM students ORDER BY roll_no ASC"
-    );
+   String keyword = request.getParameter("keyword");
+String sql;
+
+if(keyword != null && !keyword.trim().isEmpty()){
+    sql = "SELECT * FROM students WHERE name LIKE '%" + keyword + "%' OR roll_no LIKE '%" + keyword + "%'";
+} else {
+    sql = "SELECT * FROM students ORDER BY roll_no ASC";
+}
+
+ResultSet rs = st.executeQuery(sql);
+
 
     while(rs.next()){
 %>
