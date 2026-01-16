@@ -16,6 +16,13 @@
     <a href="addStudent.jsp">Add Student</a>
 </nav>
 
+<br>
+
+<form method="get" action="index.jsp" class="search-form">
+    <input type="text" name="keyword" placeholder="Search by Name or Roll No">
+    <button type="submit" class="searchBtn">Search</button>
+</form>
+
 <hr><br>
 
 <table>
